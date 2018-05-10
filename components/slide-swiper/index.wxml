@@ -1,0 +1,17 @@
+<!--components/slide-swiper/index.wxml-->
+<view class="wrapper">
+  <view class="swiper">
+    <block wx:for="{{pics}}" wx:for-index="idx">
+        <view class="swiper-item {{idx == current?'appear':idx<current?'disappear left':'disappear right'}}" 
+        style="background:url({{pics[idx]}});background-size:668rpx 296rpx;"
+        bindtouchstart='slideStart' bindtouchend='slideEnd' bindtouchmove="slide"></view>
+    </block>
+    <view class="swiper-dots">
+      <view wx:for="{{pics.length}}" wx:for-index="idx" class="swiper-dot {{current == idx?'active':''}}" 
+      bindtap='switch' data-idx="{{idx}}"></view>
+    </view>
+  </view>
+  <view>
+    <button bindtap="switchNext">下一个</button>
+  </view>
+</view>

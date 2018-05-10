@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "float-swiper": "../../components/float-swiper/index",
+    "slide-swiper": "../../components/slide-swiper/index"
+  }
+}

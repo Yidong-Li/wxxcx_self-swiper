@@ -1,0 +1,67 @@
+/* components/slide-swiper/index.wxss */
+  .wrapper {
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+  }
+  
+  .swiper {
+    height:300rpx;
+    width:80%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .swiper-item {
+    height:100%;
+    width:100%;
+    position: absolute;
+    transition:all .5s linear 0s; 
+  }
+  
+  .appear {
+
+  }
+
+  .disappear {
+    /* transform: translateX(100%); */
+    visibility: hidden;
+  }
+
+  .left {
+    transform:translateX(-100%);
+    /* transform: translateZ(0) */
+  }
+
+  .right {
+    transform:translateX(100%);
+    /* transform: translateZ(0) */
+  }
+  
+  .swiper-dots {
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:200rpx;
+    bottom: 20rpx;
+    left:200rpx;
+  }
+  
+  .swiper-dot {
+    position:relative;
+    width:20rpx;
+    height:20rpx;
+    border-radius:10rpx;
+    background:rgba(0,0,0,0.5);
+    bottom: 0;
+    display: inline-block;
+  }
+  
+  .active {
+    background:rgba(0,0,0,0.8);
+  }

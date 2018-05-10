@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+  <float-swiper pics="{{pics}}" auto="{{true}}"></float-swiper>
+  <slide-swiper pics="{{pics}}" auto="{{true}}"></slide-swiper>
+</view>

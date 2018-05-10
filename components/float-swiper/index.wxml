@@ -1,0 +1,18 @@
+<!--components/self-swiper/self-swiper.wxml-->
+<view class="wrapper">
+  <!-- <view style="display:flex;width:100%;justify-content:space-between;">
+    <button bindtap="effect" data-idx="1">浮现效果</button>
+    <button bindtap="effect" data-idx="2">滑动效果</button>
+  </view> -->
+  <view class="swiper">
+    <view class="swiper-item" style="background:url({{pics[current]}});background-size:668rpx 296rpx;" bindtouchstart='slideStart' bindtouchend='slideEnd' bindtouchmove="slide"></view>
+    <view class="swiper-dots">
+      <view wx:for="{{pics.length}}" wx:for-index="idx" class="swiper-dot {{current == idx?'active':''}}" bindtap='switch' data-idx="{{idx}}"></view>
+    </view>
+  </view>
+  <view>
+    <button bindtap="switchNext">下一个</button>
+  </view>
+</view>
+
+
